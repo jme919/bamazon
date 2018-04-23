@@ -89,20 +89,7 @@ function availability(){
 		}
 	}
 }
-//change the stock amount in mysql database//
-function changeStock(){
-	connection.query("UPDATE products SET ? WHERE ?",[
-	{
-		stock_quantity: newStock
-	},
-	{
-		id: idChoice
 
-	}
-
-	])
-		connection.end();
-}
 //give the total cost of the order//
 function orderTotal(){
 	for (i = 0; i < item.length; i++) {
@@ -117,4 +104,19 @@ function orderTotal(){
 	console.log("The total for your purchase is $" + totalPrice + ". Thanks!");
 }
 
+
+//change the stock amount in mysql database//
+function changeStock(){
+	connection.query("UPDATE products SET ? WHERE ?",[
+	{
+		stock_quantity: newStock
+	},
+	{
+		id: idChoice
+
+	}
+
+	])
+		connection.end();
+}
 
