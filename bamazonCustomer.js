@@ -113,7 +113,7 @@ function orderTotal(){
 	}
 
 	totalPrice = amountChoice * item[tableId].price
-	console.log(" ");
+	console.log("  ");
 	console.log("The total for your purchase is $" + totalPrice + ". Thanks!");
 }
 
